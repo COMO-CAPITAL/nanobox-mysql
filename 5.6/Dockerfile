@@ -32,7 +32,16 @@ RUN . /etc/lsb-release && \
 
 # Install binaries
 RUN apt-get update && \
-    apt-get install -y lsof sysstat libsys-hostname-long-perl libfile-copy-recursive-perl libfile-copy-link-perl libdata-dumper-concise-perl libdata-dumper-simple-perl iputils-arping cron percona-xtrabackup-24 && \
+    apt-get install -y \
+        lsof sysstat \
+        libsys-hostname-long-perl \
+        libfile-copy-recursive-perl \
+        libfile-copy-link-perl \
+        libdata-dumper-concise-perl \
+        libdata-dumper-simple-perl \
+        iputils-arping \
+        cron percona-xtrabackup-24 \
+        qpress && \
     rm -rf \
         /var/lib/apt/lists/* \
         /var/cache/apt/* \

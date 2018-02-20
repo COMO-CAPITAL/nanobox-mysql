@@ -1,0 +1,30 @@
+run.config:
+  engine: nodejs
+  engine.config:
+    runtime: nodejs-8.9.1
+
+data.mysql:
+  image: comocapital/nanobox-mysql:5.6
+  config:
+    users:
+      - username: root
+        meta:
+          privileges:
+            - privilege: ALL PRIVILEGES
+              'on': "*.*"
+              with_grant: true
+      - username: nanobox
+        meta:
+          privileges:
+            - privilege: ALL PRIVILEGES
+              'on': gonano.*
+              with_grant: true
+            - privilege: ALL PRIVILEGES
+              'on': transactionBase.*
+              with_grant: true
+          databases:
+          - gonano
+          - transactionBase
+
+worker.job:
+  start: sleep infinity

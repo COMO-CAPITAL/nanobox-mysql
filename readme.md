@@ -11,7 +11,7 @@ data.mysql:
 
 * Full backup (compressed, streaming) into single file:
 ```sh
-xtrabackup --defaults-file=/data/etc/my.cnf --backup --compress -compress-threads=4 --stream=xbstream --parallel=4 --databases="mydatabase1 mydatabase2" --socket=/tmp/mysqld.sock --user=root --host=127.0.0.1 > /data/var/backup-mysql-$(date -u +%Y-%m-%d.%H-%M-%S).xbstream
+xtrabackup --defaults-file=/data/etc/my.cnf --backup --compress --compress-threads=4 --stream=xbstream --parallel=4 --databases="mydatabase1 mydatabase2" --socket=/tmp/mysqld.sock --user=root --host=127.0.0.1 > /data/var/backup-mysql-$(date -u +%Y-%m-%d.%H-%M-%S).xbstream
 ```
 
 * Restore backup (compressed, streaming):

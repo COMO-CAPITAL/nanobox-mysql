@@ -1,6 +1,6 @@
 # nanobox-mysql
 
-Этот проект наследует стандартный [nanobox-docker-mysql](https://github.com/nanobox-io/nanobox-docker-mysql). Основным отличием является наличие [Percona XtraBackup](https://www.percona.com/doc/percona-xtrabackup/LATEST/index.html).
+This project inherits the standard [nanobox-docker-mysql](https://github.com/nanobox-io/nanobox-docker-mysql). The main difference is presence of [Percona XtraBackup](https://www.percona.com/doc/percona-xtrabackup/LATEST/index.html).
 
 ```yml
 data.mysql:
